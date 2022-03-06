@@ -3,14 +3,14 @@ package business.concretes;
 import java.util.regex.Pattern;
 
 import business.abstracts.ProducerCheckService;
-import dataAccess.concretes.HibernateProducerDao;
+import dataAccess.abstracts.ProducerDao;
 import entities.concretes.Producer;
 
 public class ProducerCheckManager implements ProducerCheckService {
 
-	HibernateProducerDao dao;
+	ProducerDao dao;
 
-	public ProducerCheckManager(HibernateProducerDao dao) {
+	public ProducerCheckManager(ProducerDao dao) {
 		this.dao = dao;
 	}
 
@@ -58,7 +58,7 @@ public class ProducerCheckManager implements ProducerCheckService {
 
 	@Override
 	public boolean isEmailRegistered(String email) {
-		for (Producer producer : dao.getProducers()) {
+		for (Producer producer : ProducerDao.producers) {
 			if (producer.getEmail().equals(email)) {
 				return true;
 			}
