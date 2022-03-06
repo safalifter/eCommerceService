@@ -11,7 +11,7 @@ public class ConfirmationManager implements ConfirmationService {
 
 	@Override
 	public boolean checkConfirmAccount(String email) {
-		// mail onaylama işlemi kontol simülasyon
+		// simulation
 		return true;
 	}
 }
