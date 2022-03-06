@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Producer producer = new Producer(1, "Safa", "Yeşilyurt", "safa.yesilyurt@icloud.com", "Password55");
+		Producer producer = new Producer(1, "Safa", "Yesilyurt", "safa.yesilyurt@icloud.com", "Password55");
 
 		ProducerCheckManager checkManager = new ProducerCheckManager(new HibernateProducerDao());
 		ConfirmationManager confirmationManager = new ConfirmationManager();
